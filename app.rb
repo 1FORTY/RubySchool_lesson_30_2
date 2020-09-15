@@ -31,6 +31,6 @@ post '/visit' do
   c = Client.new params[:client]
   c.save
 
-  erb "Спасибо, вы записаны."
+  erb "<h2>Спасибо, вы записаны.</h2>"
 
 end
