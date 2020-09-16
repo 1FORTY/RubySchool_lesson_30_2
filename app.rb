@@ -46,5 +46,5 @@ post '/visit' do
 end
 
 get '/barber/:id' do
-  erb "Hello World"
+  erb :barber
 end
