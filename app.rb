@@ -7,9 +7,9 @@ require 'sinatra/activerecord'
 set :database, {adapter: "sqlite3", database: "barbershop.db"}
 
 class Client < ActiveRecord::Base
-  validates :name, presence: true
-  validates :phone, presence: true
-  validates :datestamp, presence: true
+  validates :name, presence: true, length: { minimum: 3 }
+  validates :phone, presence: true, length: { minimum: 11 }
+  validates :datestamp, presence: true, length: { minimum: 10 }
   validates :color, presence: true
 end
 
@@ -25,6 +25,8 @@ get '/' do
 end
 
 get '/visit' do
+  @client = Client.new
+  @client.save
 
   erb :visit
 end

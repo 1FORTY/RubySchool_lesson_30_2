@@ -17,17 +17,17 @@
 
     <div class="form-group">
       <label>Ваше имя</label>
-      <input value="" name="client[name]" type="text" class="form-control" placeholder="Ваше имя">
+      <input value="<%= @client.name %>" name="client[name]" type="text" class="form-control" placeholder="Ваше имя">
     </div>
 
     <div class="form-group">
       <label>Ваш телефон</label>
-      <input value="" name="client[phone]" type="text" class="form-control" placeholder="Ваш телефон">
+      <input value="<%= @client.phone %>" name="client[phone]" type="text" class="form-control" placeholder="Ваш телефон">
     </div>
 
     <div class="form-group">
       <label>Когда вас ждать?</label>
-      <input id="datetimepicker" value="" name="client[datestamp]" type="text" class="form-control" placeholder="Введите дату и время">
+      <input id="datetimepicker" value="<%= @client.datestamp %>" name="client[datestamp]" type="text" class="form-control" placeholder="Введите дату и время">
     </div>
 
 
