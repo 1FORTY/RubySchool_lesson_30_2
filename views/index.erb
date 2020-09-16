@@ -10,17 +10,9 @@
     <h2>Список наших парикмахеров:</h2>
 
     <% @barbers.each do |barber| %>
-      <p>
-        <%= barber.id %>. <%= barber.name %>
-      </p>
-    <% end %>
 
-    <h2>Order(отсартированный список): </h2>
+     <a href="/barber/<%= barber.id %>"><%= barber.name %></a> <br>
 
-    <% @barbers_2.each do |barber| %>
-      <p>
-        <%= barber.id %>. <%= barber.name %>
-      </p>
     <% end %>
   </body>
 </html>

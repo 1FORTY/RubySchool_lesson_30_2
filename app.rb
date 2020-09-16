@@ -17,10 +17,11 @@ class Barber < ActiveRecord::Base
 
 end
 
-get '/' do
-  @barbers = Barber.all # Просто сохраняем список в переменную
-  @barbers_2 = Barber.order 'created_at DESC' # Сохраняем и добавляем сортировку по created_at и делаем мы это в обратном порядке из-за DESC
+before do
+  @barbers = Barber.all
+end
 
+get '/' do
   erb :index
 end
 
